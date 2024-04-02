@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #40966c;
+  color: rgb(214, 214, 214);
+}
+.paper {
+  position: relative;
+  background: white;
+  padding: 1em;
+  width: 100vw;
+  /* height: 80vh; */
+  border: transparent;
+}
+.paper:before {
+  content: "";
+  position: absolute;
+  top: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: url("./components/images/paper.png");
+}
+
+.paper:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 400px;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cmn {
+  clip-path: polygon(
+    0 12%,
+    38% 12%,
+    49% 0,
+    60% 11%,
+    100% 11%,
+    100% 100%,
+    0 100%
+  );
+}
+
+.glass {
+  background: linear-gradient
+    (135deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur (50px);
+  -webkit-backdrop-filter: blur (10px);
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
