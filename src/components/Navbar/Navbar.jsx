@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <div className="flex  justify-between items-center h-[90px] p-7 md:p-10 lg:p-3 lg:px-12 z-[100] fixed top-0 w-full bg-[#40966c]">
       <a className="text-3xl font-bold z-20 " href="/">
-        QScript
+        QScript Coffee
       </a>
       <div className="hidden gap-1 lg:flex md:flex-row md:p-2 md:gap-[2em]">
         <table>
