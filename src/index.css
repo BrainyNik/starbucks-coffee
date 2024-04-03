@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,35 +7,6 @@
 body {
   background-color: #40966c;
   color: rgb(214, 214, 214);
-}
-.paper {
-  position: relative;
-  background: white;
-  padding: 1em;
-  width: 100vw;
-  /* height: 80vh; */
-  border: transparent;
-}
-.paper:before {
-  content: "";
-  position: absolute;
-  top: 1;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  background: url("./components/images/paper.png");
-}
-
-.paper:after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height: 400px;
-  left: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .cmn {
@@ -49,11 +22,129 @@ body {
 }
 
 .glass {
-  background: linear-gradient
-    (135deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  backdrop-filter: blur (50px);
-  -webkit-backdrop-filter: blur (10px);
-  z-index: 10;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  background-color: rgba(71, 168, 120, 0.85);
+}
+
+.section {
+  padding: 1em 6rem;
+  margin-top: 3rem;
+}
+
+.paper {
+  position: relative;
+  background-color: white;
+  width: 100%;
+}
+
+.paper:before,
+.paper:after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 100%;
+  left: 0;
+  -webkit-clip-path: polygon(
+    1% 0%,
+    4% 100%,
+    9% 0%,
+    13% 100%,
+    19% 1%,
+    21% 100%,
+    26% 5%,
+    30% 100%,
+    36% 2%,
+    43% 100%,
+    50% 1%,
+    52% 100%,
+    61% 0%,
+    69% 94%,
+    70% 0%,
+    76% 100%,
+    81% 0%,
+    84% 100%,
+    91% 0%,
+    97% 100%,
+    99% 3%
+  );
+}
+
+.paper:before {
+  background: #40966c;
+  top: 7px;
+}
+
+.paper:after {
+  background: white;
+  bottom: -10px;
+}
+.papertear1 {
+  background-color: #40966c;
+  clip-path: polygon(
+    0 0,
+    2% 100%,
+    7% 0%,
+    100% 14%,
+    21% 100%,
+    25% 0%,
+    100% 34%,
+    35% 100%,
+    41% 0%,
+    100% 54%,
+    52% 100%,
+    61% 0%,
+    100% 74%,
+    76% 100%,
+    84% 0%,
+    100% 94%,
+    92% 100%,
+    100% 0
+  );
+}
+
+.papertear2 {
+  background-color: #40966c;
+  clip-path: polygon(
+    0 0,
+    4% 100%,
+    11% 0%,
+    100% 24%,
+    31% 100%,
+    37% 0%,
+    100% 44%,
+    47% 100%,
+    55% 0%,
+    100% 64%,
+    65% 100%,
+    71% 0%,
+    100% 84%,
+    86% 100%,
+    93% 0%,
+    100% 98%,
+    97% 100%,
+    100% 0
+  );
+}
+
+.papertear3 {
+  background-color: #40966c;
+  clip-path: polygon(
+    0 0,
+    6% 100%,
+    15% 0%,
+    100% 34%,
+    33% 100%,
+    39% 0%,
+    100% 54%,
+    50% 100%,
+    58% 0%,
+    100% 74%,
+    70% 100%,
+    76% 0%,
+    100% 84%,
+    88% 100%,
+    95% 0%,
+    100% 98%,
+    99% 100%,
+    100% 0
+  );
 }

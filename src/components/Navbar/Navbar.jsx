@@ -6,9 +6,9 @@ import { TbArrowsCross } from "react-icons/tb";
 const Navbar = () => {
   const links = [
     { label: "Home", path: "/" },
-    { label: "Menu", path: "/menu" },
-    { label: "About Us", path: "/about" },
-    { label: "Contact", path: "/contact" },
+    { label: "Popular Items", path: "#PopularItems" },
+    { label: "About Us", path: "#about" },
+    { label: "Contact", path: "#contact" },
   ];
 
   const [mobileNav, setMobileNav] = useState(false);
@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const toggleMobileNav = () => setMobileNav((prev) => !prev);
   return (
-    <div className="flex justify-between items-center h-[90px] p-7 md:p-10 lg:p-3 lg:px-12 ">
+    <div className="flex  justify-between items-center h-[90px] p-7 md:p-10 lg:p-3 lg:px-12 z-[100] fixed top-0 w-full bg-[#40966c]">
       <a className="text-3xl font-bold z-20 " href="/">
         QScript
       </a>
@@ -46,7 +46,7 @@ const Navbar = () => {
         >
           <FaUserCircle className="text-2xl cursor-pointer" />
           {userNav && (
-            <div className="absolute bg-[#47a878] w-max cmn  -left-[2.7rem] top-7 text-sm shadow-2xl shadow-black rounded-sm">
+            <div className="absolute bg-[#47a878] w-max cmn  -left-[2.7rem] top-7 text-sm shadow-2xl shadow-black rounded-sm z-[100]">
               <a
                 href="/fk"
                 className="p-3 pt-5 flex items-center gap-1 hover:bg-[#225139]  transition-colors duration-200 ease-in-out"
@@ -70,7 +70,7 @@ const Navbar = () => {
         <FaShoppingCart className=" text-2xl cursor-pointer" />
         {mobileNav ? (
           <TbArrowsCross
-            className="text-2xl lg:hidden cursor-pointer z-20"
+            className="text-2xl lg:hidden cursor-pointer z-50"
             onClick={toggleMobileNav}
           />
         ) : (
@@ -82,12 +82,12 @@ const Navbar = () => {
       </div>
 
       {mobileNav && (
-        <div className="lg:hidden absolute top-0 left-0  h-screen w-screen z-10 flex items-center justify-center glass">
+        <div className="overflow-hidden lg:hidden fixed top-0 left-0 right-0  h-screen z-40 flex items-center justify-center glass ">
           <table>
             <tbody className="flex flex-col gap-5 text-center">
               {links.map((link, index) => (
                 <tr key={index}>
-                  <td className="flex justify-center text-4xl hover:cursor-pointer hover:bg-[#225139] rounded-md p-2 transition-colors duration-200 ease-in-out">
+                  <td className="flex justify-center text-4xl hover:cursor-pointer  font-extrabold hover:text-[#0c1c13] rounded-md p-2 transition-colors duration-200 ease-in-out">
                     <a href={link.path}>{link.label}</a>
                   </td>
                 </tr>
